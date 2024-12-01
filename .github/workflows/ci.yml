@@ -16,7 +16,7 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Checkout portalasig-ms-site repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Clone and build portalasig-commons
@@ -31,5 +31,5 @@ jobs:
           cd portalasig-ms-uaa
           mvn clean install
 
-      - name: Build and verify portalasig-ms-site
+      - name: Build and verify service
         run: mvn clean verify
